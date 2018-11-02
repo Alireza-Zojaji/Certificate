@@ -1,6 +1,6 @@
 # Certificate
 
-This project is used for getting certificates from Ethereum smart contracts and an interface for data entry and getting certificates.
+This project is used for getting educational or training certificates from Ethereum smart contracts with a web-based interface for data entry and getting certificates.
 
 ## Getting Started
 
