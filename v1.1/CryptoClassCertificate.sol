@@ -74,6 +74,7 @@ contract CryptoClassCertificate is DataRegister {
         uint[1] memory pointer;
         pointer[0]=0;
         bool first = true;
+        copyBytesNToBytes('[', courseInfo, pointer);
         for (i=1; i<=CourseCount; i++) {
             if (Course[i].InstructorId == _instructorNumber) {
                 if (first)
@@ -81,7 +82,7 @@ contract CryptoClassCertificate is DataRegister {
                 else
                     copyBytesNToBytes(',', courseInfo, pointer);
                 found = true;
-                copyBytesNToBytes('[CourseId":"', courseInfo, pointer);
+                copyBytesNToBytes('{"CourseId":"', courseInfo, pointer);
                 copyBytesNToBytes(Course[i].CourseNumber, courseInfo, pointer);
                 copyBytesNToBytes('","CourseName":"', courseInfo, pointer);
                 copyBytesToBytes(Course[i].CourseName, courseInfo, pointer);
@@ -91,9 +92,10 @@ contract CryptoClassCertificate is DataRegister {
                 copyBytesNToBytes( Course[i].EndDate, courseInfo, pointer);
                 copyBytesNToBytes('","DurationHours":"', courseInfo, pointer);
                 copyBytesNToBytes( uintToBytesN(Course[i].Hours), courseInfo, pointer);
-                copyBytesNToBytes('"]', courseInfo, pointer);
+                copyBytesNToBytes('"}', courseInfo, pointer);
             }
         }
+        copyBytesNToBytes(']', courseInfo, pointer);
         require(found);
         return(string(courseInfo));
     }
