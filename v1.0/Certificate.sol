@@ -1,5 +1,5 @@
 pragma solidity ^0.4.25;
-contract CryptoClassCertificate {
+contract Certificate {
     bytes32 Institute;
     address owner;
     mapping(uint => bytes) Instructor;
