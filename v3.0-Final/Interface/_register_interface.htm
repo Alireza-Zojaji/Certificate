@@ -1,0 +1,93 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script language="javascript" src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.36/dist/web3.min.js"></script>
+<script language="javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+select,
+input[type=text]
+	{
+	margin-top: 0px;
+	margin-bottom: 5px;
+	}
+</style>
+</head>
+<body>
+<!-- -->
+<h2>Institute</h2>
+<input type="button" id="showInstitute" value="Show Institute"/><br/><br/>
+<input type="button" id="showAdminStats" value="Show Statistics"/>
+<!-- -->
+<hr/>
+<h2>Instructor</h2>
+Instructor National Id: <input type="text" id="instructorUId" maxlength="10" size="10"/><br/>
+Instructor Name: <input type="text" id="instructor" maxlength="" size="30"/><br/>
+<input type="button" id="registerInstructor" value="Register"/><br/><br/>
+<input type="button" id="showInstructors" value="Show Instructors"/><br/><br/>
+Instructor National Id: <input type="text" id="instructorUId1" maxlength="10" size="10"/><br/>
+<input type="button" id="showInstructorInfo" value="Show Instructor info"/><br/><br/>
+Instructor National Id: <input type="text" id="instructorUId2" maxlength="10" size="10"/><br/>
+<input type="button" id="showInstructorCourses" value="Show Instructor courses"/><br/><br/>
+<!-- -->
+<hr/>
+<h2>Course</h2>
+Course UId: <input type="text" id="courseUId" maxlength="10" size="10"/><br/>
+Course Name: <input type="text" id="courseName" maxlength="" size="30"/><br/>
+Instructor Id: <input type="text" id="instructorId" maxlength="" size="5"/><br/>
+Start Date: <input type="text" id="startDate" maxlength="10" size="10"/><br/>
+End Date: <input type="text" id="endDate" maxlength="10" size="10"/><br/>
+Duration: <input type="text" id="duration" maxlength="10" size="10"/> Hours<br/>
+<input type="button" id="registerCourse" value="Register"/><br/><br/>
+Course Id: <input type="text" id="courseId1" maxlength="" size="5"/><br/>
+Instructor Id: <input type="text" id="InstructorId2" maxlength="" size="5"/><br/>
+<input type="button" id="addInstructor" value="Add Instructor"/><br/><br/>
+<input type="button" id="showCourses" value="Show Courses"/><br/><br/>
+Course Id: <input type="text" id="courseUId1" maxlength="10" size="10"/><br/>
+<input type="button" id="showCourseInfo" value="Show Course info"/><br/><br/>
+Your National Id: <input type="text" id="instructorUId3" maxlength="10" size="10"/><br/>
+Course Id: <input type="text" id="courseUId2" maxlength="10" size="10"/><br/>
+<input type="button" id="showCourseStudents" value="Show Course Students"/><br/><br/>
+<!-- -->
+<hr/>
+<h2>Student</h2>
+National Id: <input type="text" id="studentUId" maxlength="10" size="10"/><br/>
+Name: <input type="text" id="studentName" maxlength="32" size="30"/><br/>
+<input type="button" id="registerStudent" value="Register"/><br/><br/>
+<input type="button" id="showStudents" value="Show Students"/><br/><br/>
+Student National Id: <input type="text" id="studentUId1" maxlength="10" size="10"/><br/>
+<input type="button" id="showStudentInfo" value="Show Student Info"/><br/><br/>
+<!-- -->
+<hr/>
+<h2>Certificate</h2>
+Certificate UId: <input type="text" id="certificateUId" maxlength="10" size="10"/>
+<input type="button" id="randomCertificateUId" value="R"/>
+<br/>
+Course Id: <input type="text" id="courseId" maxlength="" size="5"/><br/>
+Student Id: <input type="text" id="instructorId1" maxlength="" size="5"/><br/>
+Certificate Type: 
+<select id="CertificateType">
+<option value="1" id="certificateType1">Attendance</option>
+<option value="2" id="certificateType2">Online</option>
+<option value="3" id="certificateType3">Video</option>
+<option value="4" id="certificateType3">ELearning</option>
+</select><br/>
+Result: <input type="text" id="result1" maxlength="10" size="10"/><br/>
+<input type="button" id="registerCertificate" value="Register"/><br/><br/>
+<input type="button" id="showCertificates" value="Show Certificates"/><br/><br/>
+Certificate UId: <input type="text" id="certificateUId1" maxlength="10" size="10"/><br/>
+<input type="button" id="showCertificate" value="Show Certificate"/><br/><br/>
+Certificate UId: <input type="text" id="certificateUId2" maxlength="10" size="10"/><br/>
+<input type="button" id="enableCertificate" value="Enable Certificate"/>
+<input type="button" id="disableCertificate" value="Disable Certificate"/><br/><br/>
+Student National Id: <input type="text" id="studentUId2" maxlength="10" size="10"/><br/>
+<input type="button" id="showStudentCertificates" value="Show Student Certificate(s)"/><br/><br/>
+<!-- -->
+<hr/>
+
+<script language="javascript" src="config.js"></script>
+<script language="javascript" src="events.js"></script>
+
+</body>
+
+</html>
